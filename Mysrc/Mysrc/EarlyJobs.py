@@ -1003,12 +1003,6 @@ def PrepareSubmission():
 	carouse2pred_ranking = AdjustByMFPred(carouse2pred,carouse2user,user_item_score)
 	
 	ensemble = AvgPredictionArray([carouse2pred,carouse2predMF,carouse2predSVD,carouse2predSVD_enrich,carouse2predFT,carouse2pred_svd_nosearch,carouse2pred_pop,carouse2pred_mylite,carouse2pred_mylite_svd,carouse2pred_svd_enrich_search4,carouse2pred_ranking],[0.5,0.1,0.1,0.2,0.2,0.05,0.1,0.075,0.075,0.1,0.075]) 	
-	#           AvgPredictionArray([carouse2pred,carouse2predMF,carouse2predSVD,carouse2predSVD_enrich,carouse2predFT],[0.4,0.15,0.15,0.15,0.15])
-	#Best 2016-06-26	AvgPredictionArray([carouse2pred,carouse2predMF,carouse2predSVD,carouse2predSVD_enrich,carouse2predFT,carouse2pred_svd_nosearch,carouse2pred_pop],[0.4,0.1,0.1,0.2,0.2,0.05,0.05]) 
-	#Best 2016-06-26 0.5675    AvgPredictionArray([carouse2pred,carouse2predMF,carouse2predSVD,carouse2predSVD_enrich,carouse2predFT,carouse2pred_svd_nosearch,carouse2pred_pop,carouse2pred_mylite],[0.45,0.1,0.1,0.2,0.2,0.05,0.05,0.075]) 
-	#0.569327  AvgPredictionArray([carouse2pred,carouse2predMF,carouse2predSVD,carouse2predSVD_enrich,carouse2predFT,carouse2pred_svd_nosearch,carouse2pred_pop,carouse2pred_mylite,carouse2pred_mylite_svd],[0.45,0.1,0.1,0.2,0.2,0.05,0.05,0.075,0.075]) 
-	#0.570611  AvgPredictionArray([carouse2pred,carouse2predMF,carouse2predSVD,carouse2predSVD_enrich,carouse2predFT,carouse2pred_svd_nosearch,carouse2pred_pop,carouse2pred_mylite,carouse2pred_mylite_svd,carouse2pred_svd_enrich_search4],[0.5,0.1,0.1,0.2,0.2,0.05,0.05,0.075,0.075,0.1]) 
-	#0.570869  AvgPredictionArray([carouse2pred,carouse2predMF,carouse2predSVD,carouse2predSVD_enrich,carouse2predFT,carouse2pred_svd_nosearch,carouse2pred_pop,carouse2pred_mylite,carouse2pred_mylite_svd,carouse2pred_svd_enrich_search4,carouse2pred_ranking],[0.5,0.1,0.1,0.2,0.2,0.05,0.05,0.075,0.075,0.1,0.075]) 	
 	
 	WriteSubmisionFile(ensemble,testfile,outfile)
 
